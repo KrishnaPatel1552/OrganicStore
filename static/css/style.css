@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* General button styles */
+button {
+    background-color: #007bff; /* Default blue color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific button styles for View Queries page */
+.view-queries-button {
+    background-color: #28a745; /* Green color */
+}
+
+.view-queries-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+

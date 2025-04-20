@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arlington Organic Market{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ url_for('main.home') }}">Organic Market</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('main.add_product_page') }}">Add Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('main.get_inventory_page') }}">Inventory</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('main.update_price_page') }}">Update Price</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('main.delete_item_page') }}">Delete Item</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('main.view_queries_page') }}">Queries</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-4">{% block content %}{% endblock %}</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

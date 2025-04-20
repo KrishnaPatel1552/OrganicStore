@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Delete Product{% endblock %}
+{% block content %}
+<div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-body">
+        <h2 class="card-title">Delete Product</h2>
+        <div class="form-group">
+            <label for="iId">Item ID:</label>
+            <input id="iId" type="number" class="form-control" required>
+        </div>
+        <button class="btn btn-danger btn-block" onclick="deleteItem()">Delete Item</button>
+        <p id="responseMessage" class="mt-3 font-weight-bold"></p>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/delete_item.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}View Queries{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h2 class="my-4">View Queries</h2>
+    <div class="btn-group mb-3" role="group">
+        <button class="view-queries-button" onclick="fetchQuery('/top_revenue_items')">Top 3 Revenue Items</button>
+        <button class="view-queries-button" onclick="fetchQuery('/top_selling_items')">Items Sold &gt; 50 Units</button>
+        <button class="view-queries-button" onclick="fetchQuery('/top_loyal_customer')">Top Loyal Customer</button>
+        <button class="view-queries-button" onclick="fetchQuery('/loyal_customers_range')">Loyalty Score 4-5</button>
+        <button class="view-queries-button" onclick="fetchQuery('/total_revenue')">Total Store Revenue</button>
+    </div>
+    <p id="message" class="font-weight-bold"></p>
+    <table id="resultsTable" class="table table-bordered mt-3" style="display:none;">
+        <thead>
+        <tr id="tableHead"></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/view_queries.js') }}"></script>
+{% endblock %}
